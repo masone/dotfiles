@@ -1,0 +1,61 @@
+alias rm=trash
+
+# docker
+dsa() { docker stop $(docker ps -a -q); }
+drc() { docker rm $(docker ps -a -q); }
+dri() { docker rmi $(docker images -q); }
+
+# kube
+alias k="kubectl"
+alias kp="kubectl get pods"
+alias kn="kubens"
+alias kc="kubectx"
+alias kl="kubectl logs"
+
+# git
+alias gadd="git add ."
+alias gpll="git pull --rebase"
+alias gpsh="git push"
+alias gst="git status"
+
+alias gs="git stash save"
+alias gsp="git stash pop"
+alias gsl="git stash list"
+
+alias gr="git rebase"
+alias gri="git rebase -i"
+alias grc="git rebase --continue"
+alias gra="git rebase --abort"
+alias grm="git pull origin main --rebase"
+
+alias gc="git commit -a -S"
+alias gbr="git recent"
+alias gco="git checkout"
+alias gd="git diff"
+alias gl="git log -p"
+alias gm="git merge"
+
+alias gunstage="git reset"
+alias grdiscard="git reset --hard"
+alias grkeep="git reset"
+
+alias gcom="git checkout main"
+alias gcot="git checkout -t"
+alias gmm="git merge main"
+
+# npm
+alias ni="npm install"
+alias nt="npm test"
+alias ns="npm start"
+alias nd="npm run dev"
+alias nr="npm run"
+alias nb="npm run build"
+alias nf="npm run format"
+alias ntc="npm run typecheck"
+
+# rails
+alias bi="bundle install"
+alias be="bundle exec"
+alias bu="bundle update"
+alias rs="be rails server"
+alias rc="be rails console"
